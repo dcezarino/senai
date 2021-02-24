@@ -11,26 +11,26 @@ Inicio
 
    escreval("Informe os dados na seguinte ordem: ")
    escreval("Nome")
-   escreval("Função")
+   escreval("FunÃ§Ã£o")
    escreval("Idade")
    escreval("Sexo")
-   escreval("Salário")
+   escreval("SalÃ¡rio")
 
-   para i de 0 até 4 faca
+   para i de 0 atÃ© 4 faca
       escreval("")
-      escreval("Dados do funcionário", (i+1), ": ")
-      para j de 0 até 4 faca
+      escreval("Dados do funcionÃ¡rio", (i+1), ": ")
+      para j de 0 atÃ© 4 faca
          leia(matriz[i,j])
       fimpara
    fimpara
 
-   escreval("Térrmino da entrada de dados")
+   escreval("TÃ©rmino da entrada de dados")
    escreval(linha)
-   escreval("Leitura da matriz e apresentação dos dados")
+   escreval("Leitura da matriz e apresentaÃ§Ã£o dos dados")
 
-   escreval ("Nome; Função; Idade; Sexo; Salário")
-   para i de 0 até 4 faca
-      para j de 0 até 4 faca
+   escreval ("Nome; FunÃ§Ã£o; Idade; Sexo; SalÃ¡rio")
+   para i de 0 atÃ© 4 faca
+      para j de 0 atÃ© 4 faca
          escreva(matriz[i,j], "; ")
       fimpara
       escreval(" ")
