@@ -1,9 +1,5 @@
 Algoritmo "buscaUsuarioPeloNome"
 // Disciplina   : [Linguagem e Lógica de Programação]
-// Professor   :
-// Descrição   :
-// Autor(a)    : Nome do(a) aluno(a)
-// Data atual  : 02/03/2021
 
 Tipo
 
