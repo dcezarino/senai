@@ -5,7 +5,7 @@ Tipo
 
    // Procedimento principal()
 Var
-   opcao, totalUsuarios, i, j, resp: inteiro
+   opcao, totalUsuarios, i, j, resultado: inteiro
    usuario: vetor[0..5, 0..1] de caractere
    nomeBusca: caractere
 
@@ -39,7 +39,7 @@ Inicio
    caso 3
       escreval("Digite o nome para realizar a busca: ")
       leia(nomeBusca)
-      resp <- buscarUsuario(nomeBusca)
+      resultado <- buscarUsuario(nomeBusca)
 
    caso 4
       finalizarSistema()
@@ -90,16 +90,20 @@ fimprocedimento
 
 // Procedimento buscarUsuario()
 funcao buscarUsuario(nomeBusca: caractere):inteiro
+
 Inicio
 
+   resultado <- 0
    para i de 0 até totalUsuarios faca
       se (usuario[i] = nomeBusca) entao
          escreval("Nome: ", usuario[i,0])
          escreval("Idade: ", usuario[i,1])
-         retorne i
+         resultado <- i
+         retorne resultado
          interrompa
       senao
-         retorne -1
+         resultado <- -1
+         retorne resultado
       fimse
    fimpara
 
