@@ -88,7 +88,7 @@ Inicio
 
 fimprocedimento
 
-// Procedimento buscarUsuario()
+// Função buscarUsuario()
 funcao buscarUsuario(nomeBusca: caractere):inteiro
 
 Inicio
