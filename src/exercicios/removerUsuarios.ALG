@@ -1,18 +1,17 @@
 Algoritmo "removerUsuarios"
 
-
 Var
    opcao, opcaoRemover, totalUsuarios, i, j, resultado: inteiro
-   usuario: vetor[0..1, 0..1] de caractere
+   usuario: vetor[0..5, 0..1] de caractere
    nomeBusca, resultadoRemover: caractere
 
-   // Procedimento principal()
+// Procedimento principal()
 procedimento principal()
 Inicio
 
    // Variável que controla o total de usuários a serem cadastrados
    // Lembrando que a matriz criada tem também um total de 6 posições [0..5]
-   totalUsuarios := 1
+   totalUsuarios := 5
 
    escreval("")
    escreval ("Menu Principal")
