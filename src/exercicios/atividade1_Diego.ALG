@@ -1,20 +1,19 @@
 Algoritmo "buscaUsuarioPeloNome"
-// Disciplina   : [Linguagem e Lógica de Programação]
 
 Tipo
 
    // Procedimento principal()
 Var
-   opcao, totalUsuarios, i, j, resultado: inteiro
+   opcao, opcaoRemover, totalUsuarios, i, j, resultado: inteiro
    usuario: vetor[0..5, 0..1] de caractere
-   nomeBusca: caractere
+   nomeBusca, resultadoRemover: caractere
 
 procedimento principal()
 Inicio
 
    // Variável que controla o total de usuários a serem cadastrados
    // Lembrando que a matriz criada tem também um total de 6 posições [0..5]
-   totalUsuarios := 5
+   totalUsuarios := 1
 
    repita
       escreval("")
@@ -23,28 +22,58 @@ Inicio
       escreval("[1]-Cadastrar Usuário")
       escreval("[2]-Listar Usuários")
       escreval("[3]-Buscar Usuário pelo Nome")
+      escreval("[5]-Remover Usuário")
       escreval("[4]-Sair do Sistema")
       escreval("Digite uma opção: ")
       leia(opcao)
       limpatela
-   ate (opcao = 1) ou (opcao = 2) ou (opcao = 3) ou (opcao = 4)
+   ate (opcao = 1) ou (opcao = 2) ou (opcao = 3) ou (opcao = 4) ou (opcao = 5)
 
    escolha (opcao)
    caso 1
       cadastrarUsuario()
+      principal()
 
    caso 2
       listarUsuarios()
+      principal();
 
    caso 3
       escreval("Digite o nome para realizar a busca: ")
       leia(nomeBusca)
       resultado <- buscarUsuario(nomeBusca)
+      principal()
 
    caso 4
       finalizarSistema()
+Fimalgoritmo
 
+caso 5
+   escreval("Digite a opção para executar a remoção: ")
+   escreval("[1]-Remover pelo nome do usuário")
+   escreval("[2]-Remover todos os usuários")
+   escreval("[3]-Voltar")
+   leia(opcaoRemover)
+
+   escolha (opcaoRemover)
+   caso 1
+      escreval("Digite o nome do usuário que deseja remover: ")
+      leia(nomeBusca)
+      resultadoRemover <- removerUmUsuario(nomeBusca)
+      escreval(resultadoRemover)
+      listarUsuarios()
+      principal()
+   caso 2
+      removerTodos()
+      listarUsuarios()
+      principal()
+   caso 3
+      principal()
+   outrocaso
+      escreval("Opção incorreta!")
+      principal()
    fimescolha
+
 fimprocedimento
 
 // Procedimento cadastrarUsuario()
@@ -65,15 +94,16 @@ Inicio
       fimpara
    fimpara
 
-   principal()
-
 fimprocedimento
 
 // Procedimento listarUsuarios()
 procedimento listarUsuarios()
 Inicio
 
-   limpatela
+   se (opcaoRemover = 3) entao
+      limpatela
+   fimse
+
    escreval("--------------LISTA USUÁRIOS--------------")
    escreval ("Nome; Idade; ")
 
@@ -83,8 +113,6 @@ Inicio
       fimpara
       escreval("")
    fimpara
-
-   principal();
 
 fimprocedimento
 
@@ -107,9 +135,56 @@ Inicio
       fimse
    fimpara
 
-   principal()
+fimfuncao
+
+// Função RemoverUmUsuario()
+funcao removerUmUsuario(nomeBusca: caractere): caractere
+Var
+   retornoRemover: logico
+Inicio
+
+   retornoRemover <- falso
+   para i de 0 até totalUsuarios faca
+      se (usuario[i] = nomeBusca) entao
+         usuario[i,0] <- ""
+         usuario[i,1] <- ""
+         retornoRemover <- verdadeiro
+      fimse
+   fimpara
+
+   se (retornoRemover = verdadeiro) entao
+      retorne "Usuário removido com sucesso"
+   senao
+      retorne "Não foi possível executar a removação, usuário não cadastrado"
+   fimse
 
 fimfuncao
+
+// Procedimento RemoverTodos()
+procedimento removerTodos()
+Var
+   resultadoRemoverTodos: logico
+Inicio
+
+   resultadoRemoverTodos <- falso
+   para i de 0 até totalUsuarios faca
+      para j de 0 até 1 faca
+         se(usuario[i,j] <> "") entao
+            usuario[i,0] <- ""
+            usuario[i,1] <- ""
+            resultadoRemoverTodos <- verdadeiro
+         fimse
+      fimpara
+   fimpara
+
+   se (resultadoRemoverTodos = verdadeiro) entao
+      escreval("Todos os usuários foram removidos com sucesso")
+   senao
+      escreval("Não existem usuários a ser removidos")
+   fimse
+
+
+fimprocedimento
 
 // Procedimento finalizarSistema()
 procedimento finalizarSistema()
