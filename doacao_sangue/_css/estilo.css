@@ -1,0 +1,38 @@
+body { 
+   background-color: #F58D91;  
+   height:996px; 
+   width:616px;
+}		
+
+h1 {
+   text-align:left;
+}
+			
+h3{
+   text-align:left;
+}
+
+ol{
+   font-weight:bold; 
+} 
+
+.fn{ 
+   font-weight:bold; 
+}
+				
+.fi{ 
+   font-style: italic; 
+}
+		
+.fu{ 
+   text-decoration: underline; 
+}			
+
+#divimagem{
+   text-align:center;
+}
+			
+img{
+   width:250px; 
+   height:250px
+}
