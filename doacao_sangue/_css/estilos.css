@@ -1,0 +1,28 @@
+body {    
+	background: rgb(253, 211, 211);     
+}		
+
+th p{
+   color: rgb(0, 0, 0);
+   font-family: 'Courier New'
+}
+
+table, th, td, tr{
+   border: 2px solid black;
+   border-collapse: collapse;
+   vertical-align: middle;
+   text-align: center;
+}
+
+img {
+   position: absolute;
+   left: 110px;
+   top: 426px;
+   z-index: -1;
+   opacity : 0.4
+}
+
+h1 {
+   text-align: center;
+   color: rgb(255, 0, 0);   
+}
