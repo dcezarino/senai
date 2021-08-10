@@ -1,0 +1,109 @@
+.img-index{
+  width:100%; 
+  height:50%;
+}
+
+.icon-index{
+  width:5%; 
+  height:5%;
+}
+
+.img-rounded{
+  width:100px; 
+  height:50px
+}
+
+.img-fluid{
+ width: 90%;
+ height: 50%;
+}
+
+.card-img-top{
+ width: 1100px;
+ height: 500px;
+}
+
+.carousel-inner{
+  text-align: center;  
+  font-size: smaller;    
+}
+
+.card-title{
+  font-weight:bold;
+}
+
+.card-text{
+  text-align: center;
+}
+
+.card-group{
+ display: flex;
+}
+ 
+table,
+th
+td {
+  text-align: justify;   
+}
+
+h2{
+  text-align: center;
+}
+
+body{
+  text-align: center;
+}
+
+/*Efeito de Janela Modal*/
+*{
+  margin:0;
+  padding:0;
+}
+
+h1 {
+  color: maroon;
+  margin-left: 40px;
+}
+
+.fundo_modal{
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.75);
+  position:fixed;
+  display:none;
+  z-index:99;
+  top:0;
+}
+
+.img_modal{
+  cursor:pointer;
+}
+
+.modal{
+  width:30%;
+  height:60%;
+  background:#fff;
+  border: 1px solid #000;
+  margin:80px auto 0 auto;
+}
+
+.modal span{
+  float:right;
+  font-size:60px;
+  color: #fff;
+  margin:20px 20px;
+  position:fixed;
+  top:0;
+  right:0;
+}
+
+.modal span:hover{
+  color: #900;
+  margin:20px 20px;
+  transition:350px;
+}
+
+.modal img{
+  width:100%;
+  height:100%;	
+}
