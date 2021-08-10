@@ -1,0 +1,74 @@
+.area_0 { grid-area: logomarca; }
+.area_1 { grid-area: cabecalho; }
+.area_2 { grid-area: busca; }
+.area_3 { grid-area: lateral-e; }
+.area_4 { grid-area: conteudo-1; }
+.area_5 { grid-area: conteudo-2; }
+.area_6 { grid-area: conteudo-3; }
+.area_7 { grid-area: conteudo-4; }
+.area_8 { grid-area: rodape; }
+
+.logo-image{
+  float: center;
+}
+
+.form-inline{
+  text-align: right;	
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+
+    'logomarca cabecalho cabecalho cabecalho cabecalho'
+
+     'busca busca busca busca busca'
+
+     'lateral-e conteudo-1 conteudo-1 conteudo-2 conteudo-2'
+
+     'lateral-e conteudo-3 conteudo-3 conteudo-4 conteudo-4'
+
+    'rodape rodape rodape rodape rodape';
+
+  grid-gap: 3px;
+  background-color: rgb(126, 122, 122);
+  padding: 3px;
+}
+
+.grid-container div {
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 20px;
+}
+
+.grid-container .area_0 {
+  background-color: rgb(233, 245, 247);
+}
+
+.grid-container .area_1 {
+  background-color: rgb(233, 245, 247);
+  font-family: 'Lucida Sans';
+}
+
+.grid-container .area_2 {
+  background-color: rgb(233, 245, 247);
+}
+
+.grid-container .area_3 {
+  background-color: rgb(233, 245, 247);
+  font-family: Verdana;
+}
+
+.area_3 p{
+  text-align: center;    
+    line-height: 2;
+}
+
+.btn{
+  background-color: rgb(118, 138, 161);
+}
+
+.grid-container .area_8 {
+  background-color: rgb(233, 245, 247);
+}
