@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="icon" type="img/png" href="img/plane.png" />
+	<title>Travels World :: Contato</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" />
+	<link href="css/all.min.css" rel="stylesheet" />
+	<link href="css/templatemo-style.css" rel="stylesheet" />
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="placeholder">
+			<div class="parallax-window" data-parallax="scroll" data-image-src="img/index.jpg">
+				<div class="tm-header">
+					<div class="row tm-header-inner">
+						<div class="col-md-6 col-12">
+							<img src="img/plane.png" alt="Logo" class="tm-site-logo" />
+							<div class="tm-site-text-box">
+								<h1 class="tm-site-title">Travels World</h1>
+								<h6 class="tm-site-description">Facilitando a sua viagem</h6>
+							</div>
+						</div>
+						<nav class="col-md-6 col-12 tm-nav">
+							<ul class="tm-nav-ul">
+								<li class="tm-nav-li"><a href="index.html" class="tm-nav-link">Home</a></li>
+								<li class="tm-nav-li"><a href="sobre.html" class="tm-nav-link">Sobre</a></li>
+								<li class="tm-nav-li"><a href="pacotes.html" class="tm-nav-link">Pacotes</a></li>
+								<li class="tm-nav-li"><a href="contato.html" class="tm-nav-link active">Contato</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<main>
+			<header class="row tm-welcome-section">
+				<h2 class="col-12 text-left tm-section-title">Contato:</h2>
+			</header>
+
+			<div class="tm-container-inner-2 tm-contact-section">
+				<div class="row">
+					<div class="col-md-6">
+						<form action="" method="POST" class="tm-contact-form">
+							<div class="form-group">
+								<input type="text" name="name" class="form-control" placeholder="Nome:" required="" />
+							</div>
+
+							<div class="form-group">
+								<input type="email" name="email" class="form-control" placeholder="E-mail:"
+									required="" />
+							</div>
+
+							<div class="form-group">
+								<textarea rows="5" name="message" class="form-control" placeholder="Mensagem:"
+									required=""></textarea>
+							</div>
+
+							<div class="form-group tm-d-flex">
+								<button type="submit" class="tm-btn tm-btn-success tm-btn-right">
+									Enviar
+								</button>
+							</div>
+						</form>
+					</div>
+					<div class="col-md-6">
+						<div class="tm-address-box">
+							<a href="tel:0800-999-1111" class="tm-contact-link">
+								<i class="fas fa-phone tm-contact-icon"></i>0800-999-1111
+							</a>
+							<a href="mailto:travelsworld@travelsworld.com" class="tm-contact-link">
+								<i class="fas fa-envelope tm-contact-icon"></i>travelsworld@travelsworld.com
+							</a>
+							<div class="tm-contact-social">
+								<a href="https://fb.com/travelsworld" class="tm-social-link"><i
+										class="fab fa-facebook tm-social-icon"></i></a>
+								<a href="#" class="tm-social-link"><i class="fab fa-twitter tm-social-icon"></i></a>
+								<a href="#" class="tm-social-link"><i class="fab fa-instagram tm-social-icon"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tm-container-inner-2 tm-map-section">
+				<div class="row">
+					<div class="col-12">
+						<div class="tm-map">
+							<iframe
+								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.197721328608!2d-46.65867588575621!3d-23.561341267474987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1628552463266!5m2!1spt-BR!2sbr"
+								frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<footer class="tm-footer text-center">
+			<p>Copyright &copy; 2021 Travels World
+
+				| Design: <a rel="nofollow" href="#">Technology Systems</a></p>
+		</footer>
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/parallax.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			var acc = document.getElementsByClassName("accordion");
+			var i;
+
+			for (i = 0; i < acc.length; i++) {
+				acc[i].addEventListener("click", function () {
+					this.classList.toggle("active");
+					var panel = this.nextElementSibling;
+					if (panel.style.maxHeight) {
+						panel.style.maxHeight = null;
+					} else {
+						panel.style.maxHeight = panel.scrollHeight + "px";
+					}
+				});
+			}
+		});
+	</script>
+</body>
+
+</html>
