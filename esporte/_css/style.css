@@ -1,0 +1,35 @@
+.tela{
+    text-align: center;
+    background-color: rgb(193, 227, 240);
+}
+
+body{
+  font-family: Verdana;
+  color: #000000;
+  text-align: center;
+  background:rgb(193, 227, 240);
+}
+
+.box{  
+  width: 500px;
+  margin: 50px auto;
+}
+
+#title {
+  font-size: 30px;
+  margin-top: 25px;
+}
+#descricao{
+  font-size:20px;
+  margin: 20px auto;
+  text-align: center;
+  font-family: Verdana;
+}
+#img {
+  margin-top: 25px;
+  max-width: 365px;
+  height: auto;
+}
+#img-gym {
+  width: 75px;
+}
