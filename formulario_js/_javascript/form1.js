@@ -44,11 +44,11 @@ var create_form = () => {
   append_text_input(form, "nickname", 2, 20);
   append_br(form, 2);
 
-  append_span(form, "Nascimento:&nbsp;");
+  append_span(form, "Dia:&nbsp;");
   append_text_input(form, "day", 2, 2);
   append_br(form, 2);
 
-  append_span(form, "Mês de nascimento:&nbsp;");
+  append_span(form, "Mês:&nbsp;");
   append_text_input(form, "month", 2, 2);
   append_br(form, 2);
 
@@ -108,6 +108,7 @@ var verify_form = () => {
     name: "",
     nickname: "",
     birth_date: "",
+    cpf: "",
     team_id: "",
     sport: []
 
@@ -127,6 +128,9 @@ var verify_form = () => {
   var el_ano = document.getElementById("year");
 
   obj_form.birth_date = el_ano.value + "/" + el_mes.value + "/" + el_dia.value;
+
+  var el_cpf = document.getElementById("cpf");
+  obj_form.cpf = el_cpf.value;
 
   var el_team_id = document.getElementById("team_id");
   obj_form.team_id = el_team_id.value;
