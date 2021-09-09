@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="icon" type="image/png" href="_images/favicon.png" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:: Player :: Customizado ::</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <script src="_javascript/player.js"></script>
+</head>
+
+<body>
+
+    <div style="text-align: center;">
+
+        <video id="meuvideo" width="500" height="281" poster="_images/poster.png" controls>
+            <source src="_media/Nature.mp4" type="video/mp4">
+        </video>
+
+        <br><br>
+        
+        <button type="button" class="btnplay btn-primary btn-sm" onclick="playPause()">Play/Pause</button>
+        <button type="button" class="btnampliar btn-primary btn-sm" onclick="ampliar()">Ampliar</button>
+        <button type="button" class="btnreduzir btn-primary btn-sm" onclick="reduzir()">Reduzir</button>
+        <button type="button" class="btnnormal btn-primary btn-sm" onclick="normal()">Normal</button>
+        <button type="button" class="btncheia btn-primary btn-sm" onclick="telaCheia()">Tela Cheia</button>
+
+        <br><br>
+
+        <button type="button" class="btnmais btn-primary btn-sm" onclick="volumemais()">Volume +</button>
+        <button type="button" class="btnmenos btn-primary btn-sm" onclick="volumemenos()">Volume -</button>
+        <button type="button" class="btnmute btn-primary btn-sm" onclick="mute()">Mute</button>
+    </div>
+
+</body>
+
+</html>
