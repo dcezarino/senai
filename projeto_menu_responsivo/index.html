@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="icon" type="image/png" href="_images/favicon.png" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>:: Responsive :: Menu ::</title>
+
+    <!--Faz uma busca no google e acordo com o texto digitado no campo Search-->
+    <script src="_javascript/script.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <script type="text/javascript"
+        src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=xcaRefN20ciMQl46yKe_AnOYI97bwbndFuXcrNf5iqziU2Cl8W8qftI_t51btPeSCtWGcSiiDjr_6oNUytd9iGx6TQiBtBRtzwzPkwllcK2OjRgSavdvnhQQz5VF3QwvnRyRLdkAqdY516mNCsrKB2v0FIrx9kI3GoKYPZDksZ2UdCgxBUjysU_dymM-84qGFZf3Oq_JiuN_JccNhhwAiZj_vVl8PP2k8ap0jpHc2rEAM-pkUhxmLDFm0Gjn6EfoztOPHe50nisKVcbrGMsNiMF6W_lDSgk20soPlTbmeP8DhgfKtJ5JUdkm8JB3ITbclsgfFzWqigT6seOXBxznNRivoDOigvO2wHCfsSvXNsCe7YXTfOLYrTt88gAYwa8jAk8czR2SNVp7KKDs9pM1vs0mMJnZTd9BJQj4s4PP0jAqOGzsxFTt65aFrsS7bLnR53yznMIslVw9lABckyYjxA"
+        charset="UTF-8"></script>
+
+    <script src=https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="#">RESPONSIVE MENU</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="https://canaltech.com.br/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://canaltech.com.br/sobre/">Company</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Products
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="https://canaltech.com.br/produtos/">Devices</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <form class="d-flex">
+                    <input id="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit" onclick="abrirGoogle()">Search</button>
+                </form>
+
+            </div>
+        </div>
+    </nav>
+
+</body>
+
+</html>
