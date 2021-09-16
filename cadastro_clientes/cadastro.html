@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="icon" type="image/png" href="_images/favicon.png" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Clientes</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+    <!-- Folha de estilo  -->
+    <link rel="stylesheet" href="_css/estilo.css">
+
+    <!-- Frameworks Jquey JS -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+    <!-- Frameworks Jquey Para Mascara de Entrada de DADOS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js"></script>
+
+    <!-- Frameworks Jquey Para Validação -->
+    <script src="http://jqueryvalidation.org/files/dist/jquery.validate.js"></script>
+
+    <!-- Código feito em JS para validar com Regex , JSON e JS normal -->
+    <script src="_javascript/valida_form.js"></script>
+
+    <!-- Código feito em JS para validar com Jquey e efeito Accordeon -->
+    <script src="_javascript/jquery_funcoes.js"></script>
+
+
+</head>
+
+<body>
+
+    <h2 align="center">Cadastro de Clientes</h2>
+
+    <form name="form" id="form" onsubmit="return validar_tudo();">
+
+        <div id="container" class="container">
+
+            <div class="form-row">
+
+                <div class="form-group col-md-4">
+                    <label>Nome:</label>
+                    <input type="text" class="form-control" name="nome" placeholder="Nome" id="nome" autocomplete="off">
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label>CPF:</label>
+                    <input type="text" class="cpf form-control" placeholder="CPF" id="cpf" autocomplete="off" required
+                        size="11" maxlength="11" />
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label>Telefone:</label>
+                    <input type="text" class="form-control" id="telefone" placeholder="Telefone" size="10"
+                        maxlength="10" required />
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label>Celular:</label>
+                    <input type="text" class="form-control" id="celular" placeholder="Celular" size="11" maxlength="11"
+                        required />
+                </div>
+
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label>CEP:</label>
+                    <input type="text" class="form-control" id="cep" placeholder="CEP" size="9" maxlength="9"
+                        onblur="pesquisacep(this.value);" />
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label>Rua:</label>
+                    <input type="text" class="form-control" id="rua" placeholder="Rua" size="60" maxlength="60"
+                        disabled />
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label>Numero:</label>
+                    <input type="text" class="form-control" id="numero" placeholder="Numero" size="5" maxlength="5"
+                        required />
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label>Complemento:</label>
+                    <input type="text" class="form-control" id="complemento" placeholder="Complemento" size="40"
+                        maxlength="40" />
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label>Bairro:</label>
+                    <input type="text" class="form-control" id="bairro" placeholder="Bairro" size="40" maxlength="40"
+                        disabled />
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label>Cidade:</label>
+                    <input type="text" class="form-control" id="cidade" placeholder="Cidade" size="40" maxlength="40"
+                        disabled />
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label>Estado:</label>
+                    <input type="text" class="form-control" id="uf" placeholder="Estado" size="2" maxlength="2"
+                        disabled />
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label>IBGE:</label>
+                    <input type="text" class="form-control" id="ibge" placeholder="IBGE" size="8" maxlength="8"
+                        disabled />
+
+                </div>
+
+            </div>
+        </div>
+
+        <div align="right">
+            <button type="submit">Validar</button>
+            <input type="button" name="butassin" id="butassin" value="Cadastrar" disabled onclick="gerarJson()" />
+        </div>
+
+
+    </form>
+
+</body>
+
+</html>
