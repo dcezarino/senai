@@ -8,12 +8,10 @@ public class ContaCorrente {
 	private float valor_cc;
 	private Integer tipo_cc;
 	private String data_ocorrencia_cc;
-	private float saldo_cc;
-	Cliente titular;
+	private float saldo_cc;	
 	
 	public ContaCorrente(Integer numero_doc_cc, Integer agencia_cc, Integer conta_cc, float valor_cc, Integer tipo_cc,
-			String data_ocorrencia_cc) {
-		super();
+			String data_ocorrencia_cc) {	
 		this.numero_doc_cc = numero_doc_cc;
 		this.agencia_cc = agencia_cc;
 		this.conta_cc = conta_cc;
