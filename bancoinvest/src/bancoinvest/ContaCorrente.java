@@ -8,17 +8,9 @@ public class ContaCorrente {
 	private float valor_cc;
 	private Integer tipo_cc;
 	private String data_ocorrencia_cc;
-	private float saldo_cc;	
-			
-	public ContaCorrente(Integer numero_doc_cc, Integer agencia_cc, Integer conta_cc, float valor_cc, Integer tipo_cc,
-			String data_ocorrencia_cc) {
-		this.numero_doc_cc = numero_doc_cc;
-		this.agencia_cc = agencia_cc;
-		this.conta_cc = conta_cc;
-		this.valor_cc = valor_cc;
-		this.tipo_cc = tipo_cc;
-		this.data_ocorrencia_cc = data_ocorrencia_cc;
-	}
+	private float saldo_cc;
+	Cliente titular;
+
 
 	public Integer getNumero_doc_cc() {
 		return numero_doc_cc;
@@ -71,16 +63,17 @@ public class ContaCorrente {
 	public float getSaldo_cc() {
 		return saldo_cc;
 	}
-	
+
 	public float AtualizarSaldo(float valor) {
 		if (valor < 1) {
-			System.err.println("A operacao nao pode ser processada, valor para deposito deve ser maior que 0 \n");
+			System.err.println("A operação não pode ser processada, valor para depósito deve ser maior que 0");
 		} else {
 			saldo_cc += valor;
 		}
+
 		return saldo_cc;
 	}
-
+	
 	public String RegistrarOcorrencia() {
 		return "Ocorrência Registrada";
 	}
