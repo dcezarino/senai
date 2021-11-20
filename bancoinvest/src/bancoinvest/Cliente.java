@@ -107,27 +107,15 @@ public class Cliente {
 
 		System.out.println("=====================Dados Cliente=================");
 
-		System.out.println("Agência: " + getAgencia());
+		System.out.println("Agencia: " + getAgencia());
 		System.out.println("Conta: " + getConta());
 		System.out.println("CPF: " + getCpf());
 		System.out.println("Nome: " + getNome());
 		System.out.println("Nascimento: " + getNascimento());
-		System.out.println("Endereço: " + getEndereco());
+		System.out.println("Endereco: " + getEndereco());
 		System.out.println("Telefone: " + getTelefone());
 		System.out.println("Saldo: " + getSaldo());
 		System.out.println("Senha: " + getSenha());
-
-		System.out.println("================Dados Conta Corrente===============");
-
-		System.out.println("Número Documento: " + contaCorrente.getNumero_doc_cc());
-		System.out.println("Agência: " + contaCorrente.getAgencia_cc());
-		System.out.println("Conta: " + contaCorrente.getConta_cc());
-		System.out.println("Valor: " + contaCorrente.getValor_cc());
-		System.out.println("Tipo: " + contaCorrente.getTipo_cc());
-		System.out.println("Data Ocorrência: " + contaCorrente.getData_ocorrencia_cc());
-		System.out.println("Saldo Anterior: " + contaCorrente.getSaldo_cc());		
-		System.out.println("Saldo Atualizado: " + (contaCorrente.getSaldo_cc() + contaCorrente.getValor_cc()));
-		System.out.println("Mensagem: " + contaCorrente.RegistrarOcorrencia());
 
 	}
 

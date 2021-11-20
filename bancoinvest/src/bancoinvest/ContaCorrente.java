@@ -82,8 +82,22 @@ public class ContaCorrente {
 		return saldo_cc;
 	}
 	
+	public void MostrarConta() {
+		System.out.println("================Dados Conta Corrente================");
+
+		System.out.println("Numero Documento: " + this.getNumero_doc_cc());
+		System.out.println("Agencia: " + this.getAgencia_cc());
+		System.out.println("Conta: " + this.getConta_cc());
+		System.out.println("Valor: " + this.getValor_cc());
+		System.out.println("Tipo: " + this.getTipo_cc());
+		System.out.println("Data Ocorrencia: " + this.getData_ocorrencia_cc());
+		System.out.println("Saldo Anterior: " + this.getSaldo_cc());		
+		System.out.println("Saldo Atualizado: " + (this.getSaldo_cc() + this.getValor_cc()));
+		System.out.println("Mensagem: " + this.RegistrarOcorrencia());
+	}
+	
 	public String RegistrarOcorrencia() {
-		return "Ocorrência Registrada";
+		return "Ocorrencia Registrada";
 	}
 
 }
