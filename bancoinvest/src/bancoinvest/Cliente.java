@@ -11,9 +11,10 @@ public class Cliente {
 	private String telefone;
 	private float saldo;
 	private String senha;
+	private ContaCorrente contaCorrente;
 
 	public Cliente(Integer agencia, Integer conta, String cpf, String nome, String nascimento, String endereco,
-			String telefone, float saldo, String senha) {
+			String telefone, float saldo, String senha, ContaCorrente contaCorrente) {
 		this.agencia = agencia;
 		this.conta = conta;
 		this.cpf = cpf;
@@ -23,6 +24,7 @@ public class Cliente {
 		this.telefone = telefone;
 		this.saldo = saldo;
 		this.senha = senha;
+		this.contaCorrente = contaCorrente;
 	}
 
 	public Integer getAgencia() {
@@ -93,10 +95,18 @@ public class Cliente {
 		return saldo;
 	}
 
+	public ContaCorrente getContaCorrente() {
+		return contaCorrente;
+	}
+
+	public void setContaCorrente(ContaCorrente contaCorrente) {
+		this.contaCorrente = contaCorrente;
+	}
+
 	public void MostrarCliente() {
-		
+
 		System.out.println("=====================Dados Cliente=================");
-        
+
 		System.out.println("Agência: " + getAgencia());
 		System.out.println("Conta: " + getConta());
 		System.out.println("CPF: " + getCpf());
@@ -106,6 +116,19 @@ public class Cliente {
 		System.out.println("Telefone: " + getTelefone());
 		System.out.println("Saldo: " + getSaldo());
 		System.out.println("Senha: " + getSenha());
+
+		System.out.println("================Dados Conta Corrente===============");
+
+		System.out.println("Número Documento: " + contaCorrente.getNumero_doc_cc());
+		System.out.println("Agência: " + contaCorrente.getAgencia_cc());
+		System.out.println("Conta: " + contaCorrente.getConta_cc());
+		System.out.println("Valor: " + contaCorrente.getValor_cc());
+		System.out.println("Tipo: " + contaCorrente.getTipo_cc());
+		System.out.println("Data Ocorrência: " + contaCorrente.getData_ocorrencia_cc());
+		System.out.println("Saldo Anterior: " + contaCorrente.getSaldo_cc());		
+		System.out.println("Saldo Atualizado: " + (contaCorrente.getSaldo_cc() + contaCorrente.getValor_cc()));
+		System.out.println("Mensagem: " + contaCorrente.RegistrarOcorrencia());
+
 	}
 
 }
