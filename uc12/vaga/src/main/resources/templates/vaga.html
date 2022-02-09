@@ -1,0 +1,21 @@
+<HTML lang=”pt-br” xmlns:th="http://www.thymeleaf.org">
+
+	<BODY>
+	
+		<H1>VAGA </H1>
+	
+		<form method="post" >
+			Nome da Vaga: <input type="text" value="" name="nomeVaga">
+			<input type="submit" value="OK">
+		</form>
+	
+		<span th:text="${mensagem}"> </span>
+	
+		<div th:each=" vg : ${vagas}">
+			<span th:text="${vg.id}"> </span>
+			<span th:text="${vg.nomeVaga}"> </span>	
+		</div>
+	
+	</BODY>
+
+</HTML>
