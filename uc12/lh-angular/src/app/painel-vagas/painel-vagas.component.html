@@ -1,0 +1,33 @@
+<form>
+    <h4>Cadastrar</h4>
+    <label>Id</label><input type="text" name="id" [(ngModel)]="vaga.id"><br>
+    <label>Nome</label><input type="text" name="nome" [(ngModel)]="vaga.nome"><br>
+    <label>Foto</label><input type="text" name="foto" [(ngModel)]="vaga.foto"><br>
+    <label>Descrição</label><input type="text" name="descricao" [(ngModel)]="vaga.descricao"><br>
+    <label>Salário</label><input type="text" name="salario" [(ngModel)]="vaga.salario"><br>
+    <button type="button" (click)="cadastrar()">Cadastrar Vaga</button>
+    <button type="button" (click)="atualizar(vaga.id)">Atualizar Vaga</button>
+    <button type="button" (click)="remover(vaga.id)">Remover Vaga</button>
+</form>
+
+<section class="lista-vagas">
+
+    <div *ngFor="let vaga of vagas">
+
+        <div class="card" style="width: 18rem;">
+            <img src="assets\img\vagas\{{vaga.foto}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Código da Vaga: {{vaga.id}}</h5>
+                <h5 class="card-title">Vaga: {{vaga.nome}}</h5>
+                <h5 class="card-title">Descrição da Vaga: {{vaga.descricao}}</h5>
+                <h5 class="card-title">Salário: R$ {{vaga.salario}}</h5>
+                
+                <button type="button" (click)="atualizar(vaga.id)">Atualizar Vaga</button>
+                <button type="button" (click)="remover(vaga.id)">Remover Vaga</button>
+            
+            </div>
+        </div>
+
+    </div>
+
+</section>
