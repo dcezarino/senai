@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang=”pt-br” xmlns:th="http://thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>| App RH - UC 12 |</title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+
+
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">App RH</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/funcionarios">Funcionários</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/cadastrarFuncionario">Cadastrar Funcionário</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="/vagas">
+                                << Listar Vagas>>
+                            </a></li>
+                        <li class="nav-item"><a class="nav-link" href="/cadastrarVaga">
+                                << Cadastrar Vaga>>
+                            </a></li>
+                        	<li class="nav-item"><a class="nav-link" href="/empresas">
+								<< Listar Empresas>>
+							</a></li>
+						<li class="nav-item"><a class="nav-link" href="/cadastrarEmpresa">
+								<< Cadastrar Empresa>>
+							</a></li>
+						<li class="nav-item"><a class="nav-link" href="/logout">Sair
+						</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+
+
+    <div class="container">
+
+        <h1>Atualizar cadastro da Empresa</h1>
+
+        <br>
+
+<th:block th:include="mensagem-validacao"></th:block>
+
+        <form method="post">
+
+
+            <div class="form-group">
+                <label for=""><b>Nome da empresa:</b> </label> <input type="text" class="form-control" th:attr="value = ${empresa.nome}" name="nome"
+                    required> <small class="form-text text-muted"><i>*
+                        Utilize o nome fantasia.</i></small>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for=""><b>CNPJ:</b></label><input type="number" th:attr="value = ${empresa.cnpj}" name="cnpj" class="form-control"
+                            required /> <small class="form-text text-muted"><i>* Utilize
+                                somente números.</i></small>
+                    </div>
+
+                </div>
+                <div class="col">
+                    <label for=""><b>E-mail:</b> </label> <input type="text" th:attr="value = ${empresa.email}" name="email" class="form-control"
+                        required />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for=""><b>Telefone:</b></label><input type="number" th:attr="value = ${empresa.telefone}" name="telefone" class="form-control"
+                            required /> <small class="form-text text-muted"><i>* Formato
+                                (xx) xxxxx-xxxx.</i></small>
+                    </div>
+
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for=""><b>Responsável:</b></label><input type="text" th:attr="value = ${empresa.responsavel}" name="responsavel"
+                            class="form-control" required /> <small class="form-text text-muted"><i>* Preencha com o
+                                nome para contato (Gerente, Diretor, RH
+                                etc.)
+                                da empresa.</i></small>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <button type="submit" class="btn btn-success">Atualizar cadastro da Empresa</button>
+
+        </form>
+
+    </div>
+
+
+    <div style="height: 100px;"></div>
+
+    <div class="footer-copyright fixed-bottom bg-dark text-center py-3">
+        <span class="text-light align-middle">| App RH - UC 12 | - ©
+            2022 Copyright: CTM Supervisão de Educação Online</span>
+    </div>
+
+
+    <!--JavaScript bootstrap-->
+    <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+
+    </script>
+
+
+</body>
+
+</html>
