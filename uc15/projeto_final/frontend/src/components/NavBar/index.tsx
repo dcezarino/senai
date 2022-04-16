@@ -1,4 +1,4 @@
-import ImgDsDark from 'assets/img/ds-dark.svg';
+import ImgDsDark from 'assets/img/senai_logo.png';
 
 const NavBar = () => {
     return (
